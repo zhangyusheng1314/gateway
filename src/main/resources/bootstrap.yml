@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka/
+#配置网关
+#zuul:
+  #配置全部接口都可以传入cookie
+#  sensitive-headers:
+#  routes:
+    #product/product/list->myProduct/product/list
+#    myProduct:
+#      path: /myProduct/**
+#      serviceId: product
+      #配置cookie的传入
+#      sensitiveHeaders:
+    #如果只有path和serviceId两个属性 可以简写
+#    product: /myProduct/**
+  #配置不能访问某个路径
+#  ignored-patterns:
+#    - /**/product/list
+#放开权限 查看路由的所有地址
+#management:
+#  security:
+#    enabled: false
