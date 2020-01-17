@@ -11,6 +11,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8001/eureka/
+#配置配到git
+#ribbon超时配置
+#ribbon:
+#  ReadTimeout: 5000
+#  SocketTimeout: 5000
 #配置网关
 #zuul:
   #配置全部接口都可以传入cookie
